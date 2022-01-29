@@ -1,0 +1,345 @@
+* {
+  background-color: #192225;
+  color: #FFFFFF;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.dashboard {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 45% 35% 20%;
+      grid-template-columns: 45% 35% 20%;
+  -ms-grid-rows: 20%  20% 20% 20% 20%;
+      grid-template-rows: 20%  20% 20% 20% 20%;
+  height: 100vh;
+      grid-template-areas: "profile toDoList news" "expenseTracker toDoList news" "expenseTracker music news" "expenseTracker music eventReminder" "slider menstrualReminder wordle";
+}
+
+.profile {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: profile;
+  background-color: #192225;
+  border: solid 3px #192225;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20% 80%;
+      grid-template-columns: 20% 80%;
+      grid-template-areas: "avatar text" "avatar socialIcons";
+}
+
+.avatar {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: avatar;
+  background-image: url(/assets/avatar.png);
+  background-size: cover;
+  background-color: #192225;
+  border: solid 3px #192225;
+}
+
+.text {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: text;
+  background-color: #192225;
+  border: solid 3px #192225;
+}
+
+.socialIcons {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: socialIcons;
+  background-color: #192225;
+  border: solid 3px #192225;
+}
+
+.fa {
+  padding: 5px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 0px;
+  color: rgba(187, 187, 187, 0.66);
+}
+
+.fa:hover {
+  color: #BBF247;
+}
+
+.slider {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: slider;
+  border: solid 3px #192225;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.expenseTracker {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  grid-area: expenseTracker;
+  background-color: #192225;
+  border: solid 3px #192225;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 20%  60% 20%;
+      grid-template-rows: 20%  60% 20%;
+      grid-template-areas: "expenseHeadline" "chart" "expenseForm";
+}
+
+.expenseHeadline {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: expenseHeadline;
+}
+
+.chart {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: chart;
+  background-image: url("/assets/chart.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.expenseForm {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: expenseForm;
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 10px;
+}
+
+.menstrualForm {
+  padding-top: 10px;
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.eventForm {
+  padding-top: 10px;
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input, select {
+  background-color: #384147;
+  border-radius: 27px;
+  height: 30px;
+  border: none;
+}
+
+.eventForm {
+  grid-area: eventForm;
+  background-color: #192225;
+  border: solid 3px #192225;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 50% 50%;
+      grid-template-rows: 50% 50%;
+      grid-template-areas: "eventName eventName" "date submit";
+}
+
+#date {
+  width: 150px;
+  margin-right: 10px;
+  text-indent: 10px;
+}
+
+#reminderDate {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: date;
+  width: 150px;
+  margin-right: 10px;
+  text-indent: 10px;
+}
+
+#category {
+  width: 150px;
+  margin-right: 10px;
+  text-indent: 10px;
+}
+
+#eventName {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: eventName;
+  text-indent: 10px;
+}
+
+#type {
+  width: 100px;
+  margin-right: 10px;
+  text-indent: 10px;
+}
+
+#amount {
+  margin-right: 10px;
+  text-indent: 10px;
+}
+
+#expenseSubmit {
+  width: 30px;
+}
+
+#menstrualSubmit {
+  width: 80px;
+}
+
+#eventSubmit {
+  width: 80px;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: submit;
+}
+
+.amount {
+  color: #BBF247;
+  font-size: 30px;
+}
+
+.daysLeft {
+  color: #BBF247;
+  font-size: 50px;
+}
+
+.eventDate {
+  color: #BBF247;
+  font-size: 15px;
+}
+
+.sliderText {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #BBF247 !important;
+}
+
+.toDoList {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: toDoList;
+  background-color: #384147;
+  border-top: solid 5px #192225;
+}
+
+.music {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: music;
+  background-color: #384147;
+  border-top: solid 5px #192225;
+}
+
+.eventReminder {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  grid-area: eventReminder;
+  background-color: #192225;
+  border: solid 5px #192225;
+}
+
+a {
+  text-decoration: none;
+  background-color: #384147;
+}
+
+.d-flex {
+  background-color: #384147;
+}
+
+.list-group-item {
+  background-color: #384147;
+}
+
+.list-group {
+  background-color: #384147;
+}
+
+h3 {
+  padding-left: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  background-color: #384147;
+  font-size: 17px;
+}
+
+.news {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 3;
+  grid-area: news;
+  background-color: #384147;
+  border: solid 5px #192225;
+}
+
+hr {
+  color: #192225;
+  border: 1px solid #192225;
+}
+
+.menstrualReminder {
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
+  grid-area: menstrualReminder;
+  border-top: solid 3px #192225;
+}
+
+.wordle {
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
+  grid-area: wordle;
+  background-color: #384147;
+  border: solid 3px #192225;
+}
+/*# sourceMappingURL=styles.css.map */

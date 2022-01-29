@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="/styles.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="dashboard">
+    <div class="profile">
+      <div class="avatar"></div>
+      <div class="text">
+        <h1>Hi, Jane Doe</h1>
+      </div>
+      <div class="socialIcons">
+        <a href="https://www.linkedin.com" id="icons" class="fa fa-linkedin"></a>
+        <a href="https://www.instagram.com" id="icons" class="fa fa-instagram"></a>
+        <a href="https://www.reddit.com" id="icons" class="fa fa-reddit-alien"></a>
+        <a href="https://www.spotify.com/" id="icons" class="fa fa-spotify"></a>
+        <a href="https://mail.google.com/" class="fa fa-inbox"></a>
+        <a href="https://web.whatsapp.com/" class="fa fa-whatsapp"></a>
+        <a href="https://twitter.com/" class="fa fa-twitter"></a>
+      </div>
+    </div>
+    <div class="expenseTracker">
+      <div class="expenseHeadline">
+        <p align="center">Spends in Jan'22 <span class="amount">&nbsp;Rs. 2543</span></p>
+      </div>
+        <div class="chart"></div>
+        <div class="expenseForm">
+          <select name="type" id="type">
+            <option value="expense">Expense</option>
+            <option value="income">Income</option>
+          </select>
+          <select name="category" id="category">
+            <option value="expense">Food & Drinks</option>
+            <option value="income">Groceries</option>
+            <option value="income">Travel</option>
+            <option value="income">Rent & Bills</option>
+            <option value="income">Leisure</option>
+            <option value="income">Salary</option>
+            <option value="income">Gift</option>
+          </select>
+          <input type="number" id="amount" min="0">
+          <input type="submit" id="expenseSubmit" value="+">
+        </div>
+    </div>
+    <div class="slider">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="sliderText">
+              Remember to get 7 hours of complete sleep
+            </div>
+            <div class="sliderIcon"></div>
+          </div>
+          <div class="swiper-slide">
+            <div class="sliderText">
+              Remember to drink 3-4 litres of water everyday</div>
+            <div class="sliderIcon"></div>
+          </div>
+          <div class="swiper-slide">
+            <div class="sliderText">
+              Remember to take a break and go for a walk</div>
+            <div class="sliderIcon"></div>
+          </div>
+          <div class="swiper-slide">
+            <div class="sliderText">
+              Remember to be punctual and use your time wisely</div>
+            <div class="sliderIcon"></div>
+          </div>
+          <div class="swiper-slide">
+            <div class="sliderText">
+              Remember to be punctual and use time wisely</div>
+            <div class="sliderIcon"></div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script>
+          var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+              delay: 2500,
+              disableOnInteraction: false,
+            },
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+            }
+          });
+        </script>
+    </div>
+    <div class="toDoList">To Do List</div>
+    <div class="music">Music</div>
+    <div class="menstrualReminder">
+      <div class="menstrualForm">
+        <input type="date" id="date" placeholder="Last Period">
+        <input type="number" id="amount" min="0" placeholder="Duration of period">
+        <input type="submit" id="menstrualSubmit" placeholder="+">
+      </div>
+      <div class="menstrualCount">
+        <p align="center"><span class="daysLeft">9</span>&nbsp;days until your next period</p>
+      </div>
+    </div>
+    <div class="news">
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+          <div class="d-flex gap-2 w-100 justify-content-between">
+            <div><h3 class="mb-0">Candidate Joe Biden calls Saudi a ‘pariah’</h3></div><hr>    
+          </div>      
+        </a>
+        <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+          <div class="d-flex gap-2 w-100 justify-content-between">
+            <div><h3 class="mb-0">A new Coronavirus variant spreading in NYC</h3></div><hr>      
+          </div>      
+        </a>
+        <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+          <div class="d-flex gap-2 w-100 justify-content-between">
+            <div><h3 class="mb-0">No curfew in Karnataka from 31st Jan.</h3></div><hr>      
+          </div>      
+        </a>
+        <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+          <div class="d-flex gap-2 w-100 justify-content-between">
+            <div><h3 class="mb-0">Schools to reopen in metros</h3></div><hr>      
+          </div>
+          <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+
+            <div class="d-flex gap-2 w-100 justify-content-between">
+              <div><h3 class="mb-0">Goa election in full swing</h3></div><hr>  
+            </div>        
+        </a>
+    </div>
+    <div class="eventReminder">
+      <div class="eventForm">
+        <input type="text" id="eventName" placeholder="Name of the event">
+        <br>
+        <input type="date" id="reminderDate" placeholder="date">
+        <input type="submit" id="eventSubmit" placeholder="+">
+      </div>
+      <div class="eventList">
+        <p><span class="eventDate">30th January:&nbsp;</span>SPIT Hackathon</p>
+        <p><span class="eventDate">3rd February:&nbsp;</span>John's Birthday</p>
+        <p><span class="eventDate">14th February:&nbsp;</span>Valentine's Day</p>
+        <p><span class="eventDate">29th February:&nbsp;</span>My Anniversary</p>
+      </div>
+    </div>
+    <div class="wordle"></div>
+</body>
+</html>
