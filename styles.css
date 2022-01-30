@@ -15,7 +15,7 @@
   -ms-grid-rows: 20%  20% 20% 20% 20%;
       grid-template-rows: 20%  20% 20% 20% 20%;
   height: 100vh;
-      grid-template-areas: "profile toDoList news" "expenseTracker toDoList news" "expenseTracker music news" "expenseTracker music eventReminder" "slider menstrualReminder wordle";
+      grid-template-areas: "profile toDoList news" "expenseTracker toDoList news" "expenseTracker toDoList news" "expenseTracker toDoList eventReminder" "expenseTracker menstrualReminder eventReminder";
 }
 
 .profile {
@@ -74,8 +74,6 @@
 }
 
 .slider {
-  -ms-grid-row: 5;
-  -ms-grid-column: 1;
   grid-area: slider;
   border: solid 3px #192225;
 }
@@ -87,7 +85,7 @@
 
 .expenseTracker {
   -ms-grid-row: 2;
-  -ms-grid-row-span: 3;
+  -ms-grid-row-span: 4;
   -ms-grid-column: 1;
   grid-area: expenseTracker;
   background-color: #192225;
@@ -265,7 +263,7 @@ input, select {
 
 .toDoList {
   -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
+  -ms-grid-row-span: 4;
   -ms-grid-column: 2;
   grid-area: toDoList;
   background-color: #384147;
@@ -273,9 +271,6 @@ input, select {
 }
 
 .music {
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 2;
   grid-area: music;
   background-color: #384147;
   border-top: solid 5px #192225;
@@ -283,6 +278,7 @@ input, select {
 
 .eventReminder {
   -ms-grid-row: 4;
+  -ms-grid-row-span: 2;
   -ms-grid-column: 3;
   grid-area: eventReminder;
   background-color: #192225;
@@ -336,10 +332,22 @@ hr {
 }
 
 .wordle {
-  -ms-grid-row: 5;
-  -ms-grid-column: 3;
   grid-area: wordle;
   background-color: #384147;
   border: solid 3px #192225;
+}
+
+@media (max-width: 1000px) {
+  .dashboard {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    height: auto;
+        grid-template-areas: "profile" "toDoList" "expenseTracker" "slider"  "menstrualReminder"  "news" "eventReminder";
+  }
+  .avatar {
+    display: none;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

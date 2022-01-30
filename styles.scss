@@ -18,9 +18,9 @@
   height: 100vh;
   grid-template-areas: "profile toDoList news"
                         "expenseTracker toDoList news"
-                        "expenseTracker music news"
-                        "expenseTracker music eventReminder"
-                        "slider menstrualReminder wordle";
+                        "expenseTracker toDoList news"
+                        "expenseTracker toDoList eventReminder"
+                        "expenseTracker menstrualReminder eventReminder";
 }
 
 .profile {
@@ -294,4 +294,22 @@ hr {
   grid-area: wordle;
   background-color: #384147;
   border: solid 3px #192225;
+}
+
+@media (max-width: 1000px) {
+  .dashboard {
+    display: grid;
+    grid-template-columns: 100%;
+    height: auto;
+    grid-template-areas: "profile"
+                          "toDoList"
+                          "expenseTracker"
+                          "slider" 
+                          "menstrualReminder" 
+                          "news"
+                          "eventReminder";
+  }
+  .avatar {
+    display: none;
+  }
 }
